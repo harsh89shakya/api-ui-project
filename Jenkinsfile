@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/harsh89shakya/api-ui-project.git'
+        git branch: 'main',
+        url: 'https://github.com/harsh89shakya/api-ui-project.git'
       }
     }
     stage('Build Docker Image') {
